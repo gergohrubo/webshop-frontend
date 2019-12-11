@@ -37,3 +37,22 @@ export const uploadArticle = (data, push) => dispatch => {
     })
     .catch(console.error)
 }
+
+export const ARTICLES_FETCHED = 'ARTICLES_FETCHED'
+
+function fetchedArticles(payload) {
+  return {
+    type: ARTICLES_FETCHED,
+    payload
+  }
+}
+
+export const getArticles = () => dispatch => {
+  request
+    .get(`${baseUrl}/article`)
+    .then(response => {
+      console.log('articles are here', response.body)
+      dispatch(fetchedArticles(response.body))
+    })
+    .catch(console.error)
+}

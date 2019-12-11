@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function Album() {
+export default function Album(props) {
   const classes = useStyles();
 
   return (
@@ -39,21 +39,21 @@ export default function Album() {
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
         <Grid container spacing={4}>
-          {cards.map(card => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
+          {props.articles.map(article => (
+            <Grid item key={article.name} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image={article.url}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Heading
-                    </Typography>
+                    {article.name}
+                  </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe the content.
-                    </Typography>
+                    {article.description}
+                  </Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
