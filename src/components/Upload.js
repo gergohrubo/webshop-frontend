@@ -45,9 +45,9 @@ export default function SignUp(props) {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Log in
+            Upload new article
         </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} onSubmit={props.onSubmit} noValidate>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -118,7 +118,7 @@ export default function SignUp(props) {
               color="primary"
               className={classes.submit}
             >
-              Log in
+              Upload
           </Button>
           </form>
         </div>
