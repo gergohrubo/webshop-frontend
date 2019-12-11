@@ -8,7 +8,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Navbar from './Navbar'
+import NavbarContainer from './NavbarContainer'
 import Footer from './Footer'
 
 
@@ -37,7 +37,7 @@ export default function SignUp(props) {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <NavbarContainer />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>

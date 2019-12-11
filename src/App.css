@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+.username-navbar {
+  display: inline;
+  position: absolute;
+  right: 0;
+  margin: auto 2%;
+}

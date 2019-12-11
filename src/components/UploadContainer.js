@@ -16,7 +16,7 @@ class UploadContainer extends Component {
   }
   handleOnSubmit = event => {
     event.preventDefault()
-    this.props.dispatch(uploadArticle({ ...this.state, user_id: 1 }, this.props.history.push))
+    this.props.dispatch(uploadArticle({ ...this.state, user_id: this.props.user.jwt }, this.props.history.push))
   }
   render() {
     return (
@@ -27,4 +27,8 @@ class UploadContainer extends Component {
   }
 }
 
-export default connect(null)(UploadContainer);
+const mapStateToProps = (state) => ({
+  user: state.currentUser
+})
+
+export default connect(mapStateToProps)(UploadContainer);

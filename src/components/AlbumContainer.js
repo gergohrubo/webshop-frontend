@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Navbar from './Navbar'
+import NavbarContainer from './NavbarContainer'
 import Footer from './Footer'
 import Album from './Album'
 import { connect } from 'react-redux'
-import { getArticles, ARTICLES_FETCHED } from '../actions'
+import { getArticles } from '../actions'
 
 class AlbumContainer extends Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class AlbumContainer extends Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <Navbar />
+        <NavbarContainer />
         <main>
           {this.props.articles && <Album articles={this.props.articles} />}
         </main>

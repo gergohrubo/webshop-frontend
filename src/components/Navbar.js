@@ -13,8 +13,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Album() {
+export default function Navbar(props) {
   const classes = useStyles();
+  console.log('navbar prop', props.user)
 
   return (
     <React.Fragment>
@@ -26,8 +27,9 @@ export default function Album() {
             Music webshop
             <Link to="/signup"> Sign up</Link>
             <Link to="/album"> Album</Link>
-            <Link to="/login"> Log in</Link>
-            <Link to="/upload"> Upload</Link>
+            {!props.user.username && <Link to="/login"> Log in</Link>}
+            {props.user.username && <p className="username-navbar">{props.user.username}</p>}
+            {props.user.username && <Link to="/upload"> Upload</Link>}
           </Typography>
         </Toolbar>
       </AppBar>

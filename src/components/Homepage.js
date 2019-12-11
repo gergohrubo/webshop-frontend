@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Navbar from './Navbar'
+import NavbarContainer from './NavbarContainer'
 import Footer from './Footer'
 import Album from './Album'
 
@@ -25,7 +25,7 @@ export default function Homepage() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Navbar />
+      <NavbarContainer />
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>

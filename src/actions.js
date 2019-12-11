@@ -56,3 +56,27 @@ export const getArticles = () => dispatch => {
     })
     .catch(console.error)
 }
+
+export const LOGGED_IN = 'LOGGED_IN'
+
+function loggedIn(payload) {
+  return {
+    type: LOGGED_IN,
+    payload
+  }
+}
+
+export const logIn = (username, password, push) => dispatch => {
+  const data = { username, password }
+  console.log('sending the data:', data)
+  request
+    .post(`${baseUrl}/login`)
+    .send(data)
+    .then(response => {
+      if (push) {
+        push('/album')
+      }
+      dispatch(loggedIn(response.body))
+    })
+    .catch(console.error)
+}
