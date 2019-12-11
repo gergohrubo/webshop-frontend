@@ -3,7 +3,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -46,7 +45,7 @@ export default function SignUp(props) {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Log in
         </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>
@@ -55,10 +54,10 @@ export default function SignUp(props) {
                   variant="outlined"
                   required
                   fullWidth
-                  id="username"
-                  label="Username"
-                  name="username"
-                  autoComplete="username"
+                  id="name"
+                  label="Name"
+                  name="name"
+                  autoComplete="name"
                   onChange={props.onChange}
                 />
               </Grid>
@@ -67,11 +66,47 @@ export default function SignUp(props) {
                   variant="outlined"
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
+                  name="type"
+                  label="Type"
+                  type="type"
+                  id="type"
+                  autoComplete="type"
+                  onChange={props.onChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="url"
+                  label="URL"
+                  name="url"
+                  autoComplete="url"
+                  onChange={props.onChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="description"
+                  label="Description"
+                  name="description"
+                  autoComplete="description"
+                  onChange={props.onChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="price"
+                  label="Price"
+                  name="price"
+                  autoComplete="price"
                   onChange={props.onChange}
                 />
               </Grid>
@@ -83,15 +118,8 @@ export default function SignUp(props) {
               color="primary"
               className={classes.submit}
             >
-              Sign Up
+              Log in
           </Button>
-            <Grid container justify="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-              </Link>
-              </Grid>
-            </Grid>
           </form>
         </div>
       </Container>

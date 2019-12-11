@@ -1,10 +1,11 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -20,9 +21,13 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
+          <MusicNoteIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Music webshop
+            <Link to="/signup"> Sign up</Link>
+            <Link to="/album"> Album</Link>
+            <Link to="/login"> Log in</Link>
+            <Link to="/upload"> Upload</Link>
           </Typography>
         </Toolbar>
       </AppBar>
