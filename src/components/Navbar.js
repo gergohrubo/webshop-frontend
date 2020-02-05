@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function Navbar(props) {
   const classes = useStyles();
-  console.log('navbar prop', props.user)
 
   return (
     <React.Fragment>

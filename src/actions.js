@@ -51,7 +51,6 @@ export const getArticles = () => dispatch => {
   request
     .get(`${baseUrl}/article`)
     .then(response => {
-      console.log('articles are here', response.body)
       dispatch(fetchedArticles(response.body))
     })
     .catch(console.error)
@@ -68,7 +67,6 @@ function loggedIn(payload) {
 
 export const logIn = (username, password, push) => dispatch => {
   const data = { username, password }
-  console.log('sending the data:', data)
   request
     .post(`${baseUrl}/login`)
     .send(data)
