@@ -1,9 +1,6 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
+import { AppBar, CssBaseline, Toolbar, Typography } from '@material-ui/core';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 
