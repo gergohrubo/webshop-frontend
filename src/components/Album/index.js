@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import NavbarContainer from './NavbarContainer'
-import Footer from './Footer'
-import Album from './Album'
+import NavbarContainer from '../Navbar'
+import Footer from '../Footer'
+import Album from './layout'
 import { connect } from 'react-redux'
-import { getArticles } from '../actions'
+import { getArticles } from '../../actions'
 
 class AlbumContainer extends Component {
   componentDidMount() {

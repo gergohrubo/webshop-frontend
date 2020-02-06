@@ -1,30 +1,9 @@
 import React from 'react';
-import { Avatar, Button, CssBaseline, TextField, Link, Grid, Container, Typography } from '@material-ui/core';
+import { Avatar, Button, CssBaseline, TextField, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import { makeStyles } from '@material-ui/core/styles';
-import NavbarContainer from './NavbarContainer'
-import Footer from './Footer'
-
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%',
-    marginTop: theme.spacing(3),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+import NavbarContainer from '../Navbar'
+import Footer from '../Footer'
+import { useStyles } from './style'
 
 export default function SignUp(props) {
   const classes = useStyles();
@@ -39,7 +18,7 @@ export default function SignUp(props) {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Log in
         </Typography>
           <form className={classes.form} onSubmit={props.onSubmit} noValidate>
             <Grid container spacing={2}>
@@ -76,15 +55,8 @@ export default function SignUp(props) {
               color="primary"
               className={classes.submit}
             >
-              Sign Up
+              Log in
           </Button>
-            <Grid container justify="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-              </Link>
-              </Grid>
-            </Grid>
           </form>
         </div>
       </Container>

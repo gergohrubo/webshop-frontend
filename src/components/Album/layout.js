@@ -1,24 +1,6 @@
 import React from 'react';
 import { Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Typography, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%',
-  },
-  cardContent: {
-    flexGrow: 1,
-  }
-}));
+import { useStyles } from './style'
 
 export default function Album(props) {
   const classes = useStyles();

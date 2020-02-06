@@ -1,14 +1,8 @@
 import React from 'react';
 import { AppBar, CssBaseline, Toolbar, Typography } from '@material-ui/core';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
-import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
-
-const useStyles = makeStyles(theme => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  }
-}));
+import { useStyles } from './style'
 
 export default function Navbar(props) {
   const classes = useStyles();

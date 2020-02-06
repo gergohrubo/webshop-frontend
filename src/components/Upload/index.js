@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Upload from './Upload'
+import Upload from './layout'
 import { connect } from 'react-redux'
-import { uploadArticle } from '../actions'
+import { uploadArticle } from '../../actions'
 
 class UploadContainer extends Component {
   state = {

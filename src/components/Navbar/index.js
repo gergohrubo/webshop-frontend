@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar'
+import Navbar from './layout'
 import { connect } from 'react-redux'
 
 class NavbarContainer extends Component {

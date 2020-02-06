@@ -5,9 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import NavbarContainer from './NavbarContainer'
+import Navbar from './Navbar'
 import Footer from './Footer'
-import Album from './Album'
+import Album from './Album/layout'
 
 const useStyles = makeStyles(theme => ({
   heroContent: {
@@ -25,7 +25,7 @@ export default function Homepage() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <NavbarContainer />
+      <Navbar />
       <main>
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
