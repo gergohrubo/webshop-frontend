@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Button, CssBaseline, TextField, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import NavbarContainer from '../Navbar'
+import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { useStyles } from './style'
 
@@ -10,7 +10,7 @@ export default function SignUp(props) {
 
   return (
     <React.Fragment>
-      <NavbarContainer />
+      <Navbar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
