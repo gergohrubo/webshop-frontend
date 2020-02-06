@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   cardContent: {
     flexGrow: 1,
@@ -27,7 +27,6 @@ export default function Album(props) {
     <React.Fragment>
       <CssBaseline />
       <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
         <Grid container spacing={4}>
           {props.articles.map(article => (
             <Grid item key={article.name} xs={12} sm={6} md={4}>

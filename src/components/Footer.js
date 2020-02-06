@@ -28,7 +28,6 @@ export default function Album() {
   return (
     <React.Fragment>
       <CssBaseline />
-      {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Footer
@@ -38,7 +37,6 @@ export default function Album() {
         </Typography>
         <Copyright />
       </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }

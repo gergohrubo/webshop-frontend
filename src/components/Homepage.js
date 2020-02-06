@@ -27,7 +27,6 @@ export default function Homepage() {
       <CssBaseline />
       <NavbarContainer />
       <main>
-        {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
